@@ -112,7 +112,6 @@ exports.update = (ctx) => {
     };
     return;
   }
-
   // 기존 값에 정보를 덮어씌웁니다.
   posts[index] = {
     ...posts[index],
