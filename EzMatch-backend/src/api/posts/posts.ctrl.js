@@ -8,7 +8,6 @@ import Post from '../../models/post';
     tags: ['태그1', '태그2']
   }
 */
-
 export const write = async (ctx) => {
   const { title, body, tags } = ctx.request.body;
   const post = new Post({ title, body, tags });
