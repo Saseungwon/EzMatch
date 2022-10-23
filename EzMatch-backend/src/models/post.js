@@ -16,7 +16,7 @@ const PostSchema = new Schema({
 });
 // 모델을 만들 때는 mongoose.model 함수 사용
 // model() 함수는 기본적으로 두 개의 파라미터 필요 model(스키마이름, 스키마객체)
-// 데이터베이스는 스키마 이르믕ㄹ 정해주면 그 이름의 복수 형태로 컬렉션 이름을 만든다. Post -> posts
+// 데이터베이스는 스키마 이름을 정해주면 그 이름의 복수 형태로 컬렉션 이름을 만든다. Post -> posts
 // 이것을 무시하려면 mongoose.model('Post', PostSchema, 'custom_book_collection')  으로 세 번째 파라미터에 넣어주기
 const Post = mongoose.model('Post', PostSchema);
 export default Post;
