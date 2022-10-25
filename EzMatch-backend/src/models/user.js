@@ -11,9 +11,15 @@ UserSchema.methods.setPassword = async function (password) {
   this.hashedPassword = hash;
 };
 
-UserSchema.methods.chechPasswords = async function (password) {
+UserSchema.methods.checkPassword = async function (password) {
   const result = await bcrypt.compare(password, this.hashedPassword);
   return result; // true / false
+};
+
+UserSchema.methods.serialize = function () {
+  const data = this.toJSON();
+  delete data.hashedPassword;
+  return data;
 };
 
 UserSchema.statics.findByUsername = function (username) {
